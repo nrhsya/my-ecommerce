@@ -8,7 +8,7 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/sass/app.scss'])
     </head>
-    <body class="bg-gray-100">
+    <body>
         @include('components.layouts.navbar')
 
         {{ $slot }}
