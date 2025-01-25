@@ -6,12 +6,17 @@
 
         <title>{{ $title ?? 'Page Title' }}</title>
 
+        <tallstackui:script />
+        @livewireStyles
+
         @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/sass/app.scss'])
     </head>
     <body>
         @include('components.layouts.navbar')
 
         {{ $slot }}
+
+        @livewireScripts
 
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     </body>
